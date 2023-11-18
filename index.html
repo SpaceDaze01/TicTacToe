@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu for tic tac toe</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="jQuery.js"></script>
+  
+  <style>
+    
+    .user {
+      background-color: indigo;
+      padding: 10px;
+    }
+
+    input[type=text],
+    input[type=password] {
+      border: none;
+      display: inline-block;
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 20px 0;
+    }
+
+    input[type=text]:focus,
+    input[type=password]:focus {
+      background-color: white;
+      outline: none;
+    }
+
+    hr {
+      border: 1px solid palevioletred;
+      margin-bottom: 20px;
+    }
+
+    .registerB {
+      background-color: rgb(25, 25, 175);
+      color: white;
+      padding: 20px;
+      margin: px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+
+    .registerB:hover {
+      opacity: 1;
+    }
+
+    a {
+      color: dodgerblue;
+    }
+
+    label {
+      color: lightskyblue;
+    }
+
+    button {
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 3vh;
+      margin-bottom: 21vh;
+    }
+    
+    p {
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+  background-color: indigo;
+  
+   }
+
+
+  </style>
+</head>
+
+<body>
+
+  <section id="login">
+  <form action="/TicTacToe/welcome.html" name="login">
+    <div class="users">
+      <h1>Register Tic tac toe player</h1>
+      <p>Sign up</p>
+      <hr>
+
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter username" name="username" id="username" required>
+      </div>
+
+      <div class="users">
+      <label for="passW"><b>Password</b></label>
+      <input type="password" placeholder="Enter password" name="passW" id="passW" required>
+      </div>
+      <hr>
+
+      <p>Play now!</p>
+      
+      <div class="users">
+      <button id="btn" type="submit" class="registerB" value="registerUser">Log in</button>
+      </div>
+      <div id="msg">
+        <pre></pre>
+      </div>
+      <p>Already have an account? <a href="#">Log in</a>.</p>
+     
+
+  </form>
+  </section>
+
+  
+  <script src="index.js" type="module"></script>
+  
+
+</body>
+
+</html>

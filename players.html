@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module"></script>
+  <style>
+    body {
+      display: flex;
+      margin-top: 25vh;
+      justify-content: center;
+      background-color: lightcyan;
+    }
+
+    form {
+      color: purple;
+      background-color: palevioletred;
+      padding: 5vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    p {
+      color: purple;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    #submitBtn {
+      background-color: lightblue;
+      justify-content: center;
+      padding: 1vh;
+      color: purple;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  </style>
+
+
+</head>
+
+
+
+<body>
+  <form action="/TicTacToe/ticTacToe.html">
+    <strong>
+      <p>The players name</p>
+    </strong>
+    <label for="playerX">
+      <h3>Player 1:</h3>
+    </label>
+    <input type="text" id="player 1" required><br><br>
+    <label for="playerO">
+      <h3>Player 2:</h3>
+    </label>
+    <input type="text" id="player 2" required><br><br>
+   
+    <label for="player-select">Choose a player:
+    </label>
+
+    <select name="opponents" id="player-select" required>
+      <option value="">-choose opponents-</option>
+      <option value="">player1</option>
+      <option value="">player2</option>
+      <option value="">player3</option>
+      <option value="">player4</option>
+      <option value="">player5</option>
+
+    
+    <input type="submit" id="submitBtn" value="Submit">
+
+    </select>
+
+
+
+
+    <script src="players.js"></script>
+    <script src="jQuery.js"></script>
+  </form>
+</body>
+
+</html>

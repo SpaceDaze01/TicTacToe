@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="jQuery.js"></script>
+  <style>
+    th {
+  border: 2px solid black;
+  background-color:aquamarine;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+td {
+  border: 2px solid black;
+  background-color: rgb(192, 248, 229);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+table, td, th {
+  
+  align-items: center;
+  justify-content: center;
+}
+
+
+  </style>
+  
+  
+</head>
+
+<body>
+
+  <form action="index.html">
+    <div style="float:right;"><button>Log out</button></div>
+  </form>
+
+
+  <header>
+    <nav>
+    <a href="index.html">Register player</a>
+    <a href="players.html">Play Tic tac toe</a>
+    <a href="matchHistory.html">Match history</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="areaScore">
+      <p>
+        <span1 id="1name" class="playerName"></span1>
+        <span2 id="1score" class="playerScore"></span2>
+      </p>
+      <p>
+        <span1 id="2name" class="playerName"></span1>
+        <span2 id="2score" class="playerScore"></span2>
+      </p>
+    </section>
+    
+  </main>
+
+
+<script src="leaderBoard.js" type="module"></script>
+
+</body>
+
+</html>

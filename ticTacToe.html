@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tic tac toe</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="styleGame.css">
+  <script src="jQuery.js"></script>
+</head>
+
+<body>
+
+
+
+  <header>
+    <nav>
+      <a href="index.html">Register player</a>
+      <a href="matchHistory.html">Match history</a>
+      <a href="leaderBoard.html">Leaderboard</a>
+    </nav>
+  </header>
+
+ 
+    
+    <h1>Tic tac toe</h1>
+    <div id="board">
+      <div data-index="1" class="tile right-border bottom-border"></div>
+      <div data-index="2" class="tile right-border bottom-border"></div>
+      <div data-index="3" class="tile bottom-border"></div>
+      <div data-index="4" class="tile right-border bottom-border"></div>
+      <div data-index="5" class="tile right-border bottom-border"></div>
+      <div data-index="6" class="tile bottom-border"></div>
+      <div data-index="7" class="tile right-border"></div>
+      <div data-index="8" class="tile right-border"></div>
+      <div data-index="9" class="tile"></div>
+      <div id="strike" class="strike"></div>
+    </div>
+    <div id="game-over-area" class="hidden">
+      <h2 id="game-over-text">Winner is X</h2>
+      <button id="play-again">Play again</button>
+    </div>
+
+
+    <section id="rounds">
+    <h1>Round: <span id="round" max="10" value="1">1</span></h1>
+    </section>
+
+
+    <section id="points">
+    <p>Player X: <span id="pointsPlayerX" name="playerX" max="10">0</span></p>
+    
+    <p>Player O: <span id="pointsPlayerO" name="playerO" max="10"><br>0</span></p>
+    </section>
+
+
+    <p>Press here to save the game and go to the leaderboard page</p>
+    <section id="buttonSave">
+      <form action="/TicTacToe/leaderBoard.html">
+      <button>Save game <span id="savedGame"></span></button>
+      </form>
+    </section>
+
+    <script src="game.js" type="module"></script>
+    
+    
+    
+</body>
+
+</html>

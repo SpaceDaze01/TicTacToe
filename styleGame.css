@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+
+nav {
+  width: 100vw;
+  position: flex;
+  display: flex;
+  justify-content: space-around;
+  padding: 1vh 0;
+  background-color: rgba(14, 25, 181, 0.6);
+}
+
+nav>a {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 1vw;
+  margin-top: 5px;
+  font-size: 3vh;
+  color:white;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+
+#board {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tile {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:red;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-border {
+  border-right: 0.2em solid limegreen;
+}
+
+.bottom-border {
+  border-bottom: 0.2em solid limegreen;
+}
+
+.strike {
+  position: absolute;
+  background-color: indigo;
+}
+
+.strike-row-1 {
+  width: 100%;
+  height: 4px;
+  top: 15%;
+}
+
+.strike-row-2 {
+  width: 100%;
+  height: 4px;
+  top: 48%;
+}
+
+.strike-row-3 {
+  width: 100%;
+  height: 4px;
+  top: 83%;
+}
+
+.strike-column-1 {
+  height: 100%;
+  width: 4px;
+  left: 15%;
+}
+
+.strike-column-2 {
+  height: 100%;
+  width: 4px;
+  left: 48%;
+}
+
+.strike-column-3 {
+  height: 100%;
+  width: 4px;
+  left: 83%;
+}
+
+.strike-diagonal-1 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(45deg);
+}
+
+
+.strike-diagonal-2 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(-45deg);
+}
+
+h1 {
+  color: black;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#game-over-area {
+  text-align: center;
+  border: limegreen 8px solid;
+  padding: 50px;
+  width: 50%;
+  margin-top: 50px;
+}
+
+h2 {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(38, 38, 222);
+  font-size: 2em;
+  margin-top: 0px;
+}
+
+button {
+  background-color: transparent;
+  color: rgb(107, 24, 202);
+  border: rgb(184, 14, 184) 4px solid;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.x-hover:hover::after {
+  content: "X";
+  opacity: 0.4;
+}
+
+.o-hover:hover::after {
+  content: "O";
+  opacity: 0.4;
+}
+
+#pointsPlayerX {
+  display: flex;
+  margin-right: 70vh;
+}
+
+#rounds {
+ padding: 4vh;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  nav>a {
+    font-size: 3vh;
+  }
+
+  section> :nth-child(2) {
+    align-self: center;
+  }
+
+  section> :nth-child(3) {
+    display: none;
+  }
+}
