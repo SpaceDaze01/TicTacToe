@@ -1,9 +1,9 @@
 //save user info
 
-let userList = []
 
-const addUser = (ev) => {
-  ev.preventDefault();
+
+export default function addUser() {
+  let userList = []
   let user = {
     name: document.getElementById('username').value,
     password: document.getElementById('passW').value
@@ -24,4 +24,5 @@ const addUser = (ev) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('btn').addEventListener('click', addUser);
-});
+})
+;
