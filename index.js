@@ -1,9 +1,11 @@
+
+
 //save user info
 
+let userList = []
 
-
-export default function addUser() {
-  let userList = []
+const addUser = (ev) => {
+  ev.preventDefault();
   let user = {
     name: document.getElementById('username').value,
     password: document.getElementById('passW').value
@@ -14,15 +16,16 @@ export default function addUser() {
   document.forms[0].reset();
 
 
-  //only to see if it works
+  //only for display and see if it works
   console.warn('added', { userList });
-  
-  
+  let pre = document.querySelector('#msg pre');
+  pre.textContent = '\n' + JSON.stringify(userList, '\t', 2);
+
+
   //save to local storage
   localStorage.setItem('userList', JSON.stringify(userList));
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('btn').addEventListener('click', addUser);
-})
-;
+});
