@@ -50,22 +50,33 @@
 
 
   <section id="points">
-    <p>Player X: <span id="pointsPlayerX" name="playerX" max="10">0</span></p>
+    <p>Player X: <span id="pointsPlayerX" name="playerX">0</span></p>
 
-    <p>Player O: <span id="pointsPlayerO" name="playerO" max="10"><br>0</span></p>
+    <p>Player O: <span id="pointsPlayerO" name="playerO"><br>0</span></p>
   </section>
 
-
+  
   <p>Press here to save the game and go to the leaderboard page</p>
   <section id="buttonSave">
-    <form action="/TicTacToe/leaderBoard.html">
-      <button>Save game <span id="savedGame"></span></button>
+    <form>
+      <button type="button" id="savedGame" onclick="saveGameH()">Save game</button>
     </form>
   </section>
 
   <script src="game.js" type="module"></script>
 
+  <script type="module">
+  import { updateUser } from "./server-request.js";
+  function saveGameH() {
+  let matchHistory = {
+      "opponent": 1,
+      "rounds": 1,
+      "result": "",
+    }
 
+    updateUser.push(matchHistory);
+    }
+    </script>
 
 </body>
 

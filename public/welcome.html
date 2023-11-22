@@ -12,8 +12,8 @@
 
 <body>
 
-  <form action="index.html">
-  <div style="float:right;"><button>Log out</button></div>
+  <form>
+  <div style="float:right;"><button type="button" id="logOut">Log out</button></div>
   </form>
     <header>
       <nav>
@@ -24,9 +24,16 @@
     </header>
     <h1>Welcome</h1>
     
-    <script>
-       localStorage.getItem("userList")
-    </script>
+  <script type="module">
+    const logOutbtn = document.getElementById("logOut")
+
+      logOutbtn.addEventListener("click", function (event) { logOut(event) })
+
+      function logOut(event) {
+        event.preventDefault();
+        window.location.pathname = "/index.html"
+      }
+  </script>
     
 </body>
 </html>

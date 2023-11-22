@@ -12,8 +12,8 @@
 
 <body>
 
-  <form action="index.html">
-    <div style="float:right;"><button>Log out</button></div>
+  <form>
+    <div style="float:right;"><button type="button" id="logOut">Log out</button></div>
   </form>
 
 
@@ -28,7 +28,34 @@
 
   <main>
     <h1>Match history</h1>
+
+
+    <script type="module">
+      import { getAllUsers } from "./server-request.js";
+      console.log(await getAllUsers())
+
+      
+    </script>
+
   </main>
+
+  <script type="module">
+    const logOutbtn = document.getElementById("logOut")
+
+    logOutbtn.addEventListener("click", function (event) { logOut(event) })
+
+    function logOut(event) {
+      event.preventDefault();
+      window.location.pathname = "/index.html"
+
+
+    }
+    
+    
+    
+
+      </script>
+
 </body>
 
 </html>

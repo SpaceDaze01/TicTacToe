@@ -5,13 +5,12 @@ const player_O = "O";
 let turn = player_X;
 let round = 1;
 
-
 let pointsPlayerX = 0;
 let pointsPlayerO = 0;
-/*
-let win;
-let lost;
-*/
+
+let won = "Won";
+let lost = "Lost";
+
 const boardState = Array(tiles.length);
 boardState.fill(null);
 
@@ -20,10 +19,26 @@ const strike = document.getElementById("strike");
 const gameOverArea = document.getElementById("game-over-area");
 const gameOverText = document.getElementById("game-over-text");
 const playAgain = document.getElementById("play-again");
+const savedGamebtn = document.getElementById("savedGame")
+
+savedGamebtn.addEventListener("click", function (event) { savedGame(event) } )
 
 playAgain.addEventListener("click", startNewGame);
 
 tiles.forEach((tile) => tile.addEventListener("click", tileClick));
+
+function savedGame(event) {
+  event.preventDefault();
+  window.location.pathname = "/leaderBoard.html"
+
+  if (pointsPlayerX > pointsPlayerO) {
+    console.log(`X ` + won, `O ` + lost)
+    
+  } else if (pointsPlayerO > pointsPlayerX) {
+    console.log(`O ` + won, `X ` + lost)
+  } 
+
+}
 
 
 function setHoverText() {
@@ -152,7 +167,6 @@ const winningCombinations = [
 
 
 
-
 //poäng till players
 function whoWon(winner) {
   if (winner === player_X) {
@@ -163,8 +177,5 @@ function whoWon(winner) {
     document.getElementById("pointsPlayerO").innerText = pointsPlayerO;
   } 
 }
-
-
-
 
 

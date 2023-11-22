@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Emil",
+      "password": "2345",
+      "matchHistory": [
+        {
+          "opponent": 2,
+          "rounds": 10,
+          "result": "Won"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "username": "Loke",
+      "password": "2rtr",
+      "matchHistory": [
+        {
+          "opponent": 2,
+          "rounds": 10,
+          "result": "Lost"
+        }
+      ]
+    },
+    {
+      "id": 3
+    }
+  ]
+}

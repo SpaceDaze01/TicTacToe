@@ -44,7 +44,7 @@
 
 
 <body>
-  <form action="/TicTacToe/ticTacToe.html">
+  <form>
     <strong>
       <p>The players name</p>
     </strong>
@@ -54,13 +54,8 @@
     <input type="text" id="player 1" required><br><br>
     <label for="playerO">
       <h3>Player 2:</h3>
-    </label>
-    <input type="text" id="player 2" required><br><br>
-   
-    <label for="player-select">Choose a player:
-    </label>
-
-    <select name="opponents" id="player-select" required>
+    
+    <select name="opponents" required>
       <option value="">-choose opponents-</option>
       <option value="">player1</option>
       <option value="">player2</option>
@@ -69,13 +64,21 @@
       <option value="">player5</option>
 
     
-    <input type="submit" id="submitBtn" value="Submit">
+    <input type="button" id="playerbtn" value="Submit" onclick="playerbtn()" >
 
     </select>
 
+    
+    <script type="module">
+      const savedPlayersbtn = document.getElementById("playerbtn")
+      savedPlayersbtn.addEventListener("click", function (event) { playerbtn(event) })
 
-
-
+      function playerbtn(event) {
+        event.preventDefault();
+        window.location.pathname = "/ticTacToe.html"
+      }
+    
+</script>
     <script src="players.js" type="module"></script>
     <script src="jQuery.js"></script>
   </form>

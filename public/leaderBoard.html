@@ -22,7 +22,6 @@ td {
 
 
 table, td, th {
-  
   align-items: center;
   justify-content: center;
 }
@@ -30,13 +29,12 @@ table, td, th {
 
   </style>
   
-  
 </head>
 
 <body>
 
-  <form action="index.html">
-    <div style="float:right;"><button>Log out</button></div>
+  <form>
+    <div style="float:right;"><button id="logOut" type="button">Log out</button></div>
   </form>
 
 
@@ -49,6 +47,7 @@ table, td, th {
   </header>
 
   <main>
+    
     <section id="areaScore">
       <p>
         <span1 id="1name" class="playerName"></span1>
@@ -64,6 +63,12 @@ table, td, th {
 
 
 <script src="leaderBoard.js" type="module"></script>
+<script type="module">
+  import { getAllUsers } from "./server-request.js";
+  console.log(await getAllUsers())
+
+  import { updateUser } from "./server-request.js";
+  console.log(await updateUser())</script>
 
 </body>
 

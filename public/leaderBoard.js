@@ -1,9 +1,11 @@
 
+
+
 const headLine = document.createElement("h1");
 headLine.innerText = "Leaderboard";
 
 
-const users = [
+const results = [
   {
     name: "",
     score: 0,
@@ -17,6 +19,18 @@ const users = [
     WorL: ""
   }
 ];
+
+
+
+const logOutbtn = document.getElementById("logOut")
+
+logOutbtn.addEventListener("click", function (event) { logOut(event) })
+
+function logOut(event) {
+  event.preventDefault();
+  window.location.pathname = "/index.html"
+}
+
 
 
 const table = document.createElement("table");
@@ -48,7 +62,7 @@ table.appendChild(tbody);
 
 let index = 1;
 
-for (let user of users) {
+for (let user of results) {
   
   const playerRow = document.createElement("tr");
   const playerName = document.createElement("td");
@@ -100,12 +114,13 @@ tbody.addEventListener("click", function (event) {
   const playerScore = playerRow.querySelector('.playerScore');
 
   
-  playerScore.innerText = users[playerIndex].score;
+  playerScore.innerText = results[playerIndex].score;
 
 })
 
 document.body.appendChild(headLine);
 document.body.appendChild(table);
+
 
 
 
